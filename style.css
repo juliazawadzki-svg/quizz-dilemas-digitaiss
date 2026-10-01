@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #07080d;
+    color: #f5f7ff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: #693cff;
+    opacity: 0.08;
+    filter: blur(150px);
+    top: -200px;
+    right: -150px;
+    pointer-events: none;
+}
+
+
+/* HEADER */
+
+.cabecalho {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    border-bottom: 1px solid #1c1d27;
+
+    background: rgba(7, 8, 13, 0.9);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -1px;
+}
+
+
+.logo span {
+    color: #8b5cf6;
+}
+
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+
+nav a {
+    color: #a7a9b5;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: white;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 10%;
+
+    position: relative;
+}
+
+
+.hero-conteudo {
+    max-width: 650px;
+}
+
+
+.tag {
+    color: #9b7aff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    margin-bottom: 30px;
+}
+
+
+.hero h1 span {
+    display: block;
+    color: #8b5cf6;
+}
+
+
+.descricao {
+    color: #a7a9b5;
+    line-height: 1.8;
+    max-width: 570px;
+    margin-bottom: 40px;
+}
+
+
+.botao-principal {
+    border: none;
+    background: #8b5cf6;
+    color: white;
+
+    padding: 17px 28px;
+
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.botao-principal:hover {
+    background: #a78bfa;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(139, 92, 246, 0.25);
+}
+
+
+/* SÍMBOLO */
+
+.simbolo-ia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 350px;
+    height: 350px;
+
+    border: 1px solid #252735;
+    border-radius: 50%;
+}
+
+
+.circulo {
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Space Grotesk';
+    font-size: 80px;
+    font-weight: 800;
+
+    color: #8b5cf6;
+
+    border: 1px solid #8b5cf6;
+
+    box-shadow:
+        0 0 50px rgba(139, 92, 246, 0.2),
+        inset 0 0 50px rgba(139, 92, 246, 0.05);
+}
+
+
+/* QUIZ */
+
+.quiz-container {
+    padding: 100px 10%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.quiz-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 25px;
+}
+
+
+.questao-numero {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #858795;
+}
+
+
+.barra {
+    width: 250px;
+    height: 4px;
+
+    background: #20212b;
+
+    margin-top: 10px;
+}
+
+
+#progresso {
+    width: 10%;
+    height: 100%;
+    background: #8b5cf6;
+
+    transition: width 0.4s;
+}
+
+
+.pontuacao {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #858795;
+}
+
+
+.pontuacao strong {
+    color: white;
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+
+/* CARD */
+
+.quiz-card {
+    background: #101119;
+    border: 1px solid #242631;
+    padding: 25px;
+}
+
+
+.imagem-container {
+    width: 100%;
+    height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #05060a;
+}
+
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.selo {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    padding: 12px 18px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    opacity: 0;
+}
+
+
+.selo.correto {
+    opacity: 1;
+    background: #16a34a;
+}
+
+
+.selo.errado {
+    opacity: 1;
+    background: #dc2626;
+}
+
+
+.pergunta {
+    padding: 35px 5px 25px;
+}
+
+
+.pequeno-titulo {
+    color: #8b5cf6;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+
+.pergunta h2 {
+    font-family: 'Space Grotesk';
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+
+.instrucao {
+    color: #777a88;
+    font-size: 14px;
+}
+
+
+/* BOTÕES */
+
+.botoes-resposta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+
+.botao-resposta {
+    min-height: 70px;
+
+    border: 1px solid #30323e;
+
+    background: #171821;
+
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.botao-resposta span {
+    margin-right: 10px;
+}
+
+
+.botao-resposta:hover {
+    transform: translateY(-3px);
+}
+
+
+.botao-resposta.real:hover {
+    border-color: #22c55e;
+    background: rgba(34, 197, 94, 0.08);
+}
+
+
+.botao-resposta.ia:hover {
+    border-color: #8b5cf6;
+    background: rgba(139, 92, 246, 0.08);
+}
+
+
+.botao-resposta:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+/* EXPLICAÇÃO */
+
+.explicacao {
+    display: none;
+
+    margin-top: 25px;
+    padding: 25px;
+
+    border-left: 3px solid #8b5cf6;
+
+    background: #151620;
+}
+
+
+.explicacao.mostrar {
+    display: block;
+}
+
+
+.explicacao h3 {
+    margin-bottom: 10px;
+}
+
+
+.explicacao p {
+    color: #a7a9b5;
+    line-height: 1.7;
+}
+
+
+.botao-proxima {
+    margin-top: 20px;
+
+    border: none;
+    background: white;
+    color: #08090d;
+
+    padding: 12px 20px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* RESULTADO */
+
+.resultado {
+    display: none;
+
+    text-align: center;
+
+    padding: 150px 20px;
+}
+
+
+.resultado.mostrar {
+    display: block;
+}
+
+
+.resultado h2 {
+    font-family: 'Space Grotesk';
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+
+
+.resultado-numero {
+    font-family: 'Space Grotesk';
+    font-size: 100px;
+    font-weight: 800;
+    color: #8b5cf6;
+}
+
+
+.resultado-numero small {
+    font-size: 30px;
+    color: #666875;
+}
+
+
+.resultado h3 {
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+
+.resultado p:not(.tag) {
+    max-width: 550px;
+    margin: 0 auto 35px;
+    color: #9da0ae;
+    line-height: 1.7;
+}
+
+
+/* SOBRE */
+
+.sobre {
+    padding: 130px 10%;
+
+    border-top: 1px solid #1c1d27;
+}
+
+
+.sobre-conteudo {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+.sobre h2 {
+    font-family: 'Space Grotesk';
+    font-size: 50px;
+    line-height: 1.05;
+    margin-bottom: 30px;
+}
+
+
+.sobre p:not(.tag) {
+    color: #9da0ae;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #1c1d27;
+
+    padding: 30px 10%;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #666875;
+
+    font-size: 12px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    .cabecalho {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 70px 7%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .descricao {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .simbolo-ia {
+        display: none;
+    }
+
+    .quiz-container {
+        padding: 70px 5%;
+    }
+
+    .imagem-container {
+        height: 350px;
+    }
+
+    .botoes-resposta {
+        grid-template-columns: 1fr;
+    }
+
+    .pergunta h2 {
+        font-size: 25px;
+    }
+
+    .quiz-topo {
+        align-items: center;
+    }
+
+    .barra {
+        width: 160px;
+    }
+
+    .sobre {
+        padding: 90px 7%;
+    }
+
+    .sobre h2 {
+        font-size: 38px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .cabecalho {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .imagem-container {
+        height: 280px;
+    }
+
+    .resultado-numero {
+        font-size: 75px;
+    }
+
+}

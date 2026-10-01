@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Real ou IA?</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">REAL<span>OU</span>IA?</div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section id="inicio" class="hero">
+
+            <div class="hero-conteudo">
+
+                <p class="tag">DILEMAS DIGITAIS</p>
+
+                <h1>
+                    Você consegue
+                    <span>detectar a IA?</span>
+                </h1>
+
+                <p class="descricao">
+                    Algumas imagens são fotografias reais.
+                    Outras foram completamente criadas por inteligência artificial.
+                    Será que você consegue descobrir quais são quais?
+                </p>
+
+                <button class="botao-principal" onclick="iniciarQuiz()">
+                    COMEÇAR O QUIZ
+                </button>
+
+            </div>
+
+            <div class="simbolo-ia">
+                <div class="circulo">
+                    AI
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ -->
+        <section id="quiz" class="quiz-container">
+
+            <div class="quiz-topo">
+
+                <div>
+                    <p class="questao-numero">
+                        QUESTÃO <span id="numeroQuestao">1</span>/10
+                    </p>
+
+                    <div class="barra">
+                        <div id="progresso"></div>
+                    </div>
+                </div>
+
+                <div class="pontuacao">
+                    PONTOS
+                    <strong id="pontuacao">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="quiz-card">
+
+                <div class="imagem-container">
+
+                    <img
+                        id="imagemQuiz"
+                        src="imagens/imagem1.jpg"
+                        alt="Imagem do quiz"
+                    >
+
+                    <div id="seloResultado" class="selo">
+                    </div>
+
+                </div>
+
+
+                <div class="pergunta">
+
+                    <p class="pequeno-titulo">
+                        ANALISE A IMAGEM
+                    </p>
+
+                    <h2>
+                        Essa imagem é real ou foi gerada por IA?
+                    </h2>
+
+                    <p class="instrucao">
+                        Observe os detalhes antes de escolher.
+                    </p>
+
+                </div>
+
+
+                <div class="botoes-resposta">
+
+                    <button
+                        class="botao-resposta real"
+                        onclick="responder('real')"
+                        id="botaoReal"
+                    >
+                        <span>📷</span>
+                        IMAGEM REAL
+                    </button>
+
+                    <button
+                        class="botao-resposta ia"
+                        onclick="responder('ia')"
+                        id="botaoIA"
+                    >
+                        <span>✦</span>
+                        GERADA POR IA
+                    </button>
+
+                </div>
+
+
+                <div id="explicacao" class="explicacao">
+
+                    <h3 id="tituloExplicacao"></h3>
+
+                    <p id="textoExplicacao"></p>
+
+                    <button
+                        class="botao-proxima"
+                        onclick="proximaQuestao()"
+                    >
+                        PRÓXIMA →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+        <section id="resultado" class="resultado">
+
+            <p class="tag">QUIZ FINALIZADO</p>
+
+            <h2>
+                Seu resultado
+            </h2>
+
+            <div class="resultado-numero">
+                <span id="pontuacaoFinal">0</span>
+                <small>/10</small>
+            </div>
+
+            <h3 id="mensagemFinal"></h3>
+
+            <p id="descricaoFinal"></p>
+
+            <button
+                class="botao-principal"
+                onclick="reiniciarQuiz()"
+            >
+                JOGAR NOVAMENTE
+            </button>
+
+        </section>
+
+
+        <!-- SOBRE -->
+        <section id="sobre" class="sobre">
+
+            <div class="sobre-conteudo">
+
+                <p class="tag">DILEMAS DIGITAIS</p>
+
+                <h2>
+                    Por que é tão difícil
+                    identificar uma IA?
+                </h2>
+
+                <p>
+                    As inteligências artificiais generativas conseguem
+                    produzir imagens cada vez mais realistas. Isso cria
+                    novos desafios para a sociedade: como saber se uma
+                    imagem realmente aconteceu?
+                </p>
+
+                <p>
+                    Este quiz é uma forma de refletir sobre esse dilema.
+                    Observe os detalhes, questione o que vê e lembre-se:
+                    uma imagem convincente não é necessariamente uma
+                    imagem verdadeira.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Projeto escolar — Dilemas Digitais
+        </p>
+
+        <p>
+            Desenvolvido com HTML, CSS e JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
